@@ -16,7 +16,7 @@ def data_init():
     screen = display.set_mode(
         (900, 600), flags=DOUBLEBUF)
     # 加载图片
-    title = image.load('img/map1.png').convert()
+    title = image.load('img/map/map.png').convert()
     P1 = image.load('img/P1/R/player.png').convert_alpha()
     music.load('audio/background.ogg')
     music.play(loops=-1, start=0.0)

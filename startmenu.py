@@ -42,14 +42,14 @@ def data_init():
     screen = display.set_mode(
         (900, 600), flags=DOUBLEBUF)
     # 加载图片
-    title = image.load('img/title.jpeg').convert()
+    title = image.load('img/menu/title.jpeg').convert()
     icon = image.load('img/icon/icon.jpeg').convert_alpha()
     fonts = font.SysFont("consolas", 32)
     option0 = fonts.render("Press Space to Select", True, (255, 255, 255))
     option1 = fonts.render("1  Player", True, (255, 255, 255))
     option2 = fonts.render("2  Players", True, (255, 255, 255))
     sign = fonts.render("© 2021  Hgy|Wzy|Jyx", True, (255, 255, 255))
-    option = image.load('img/option.png').convert()
+    option = image.load('img/menu/option.png').convert()
     display.set_icon(icon)
     # 加载音乐
     music.load('audio/title.ogg')
