@@ -5,7 +5,6 @@ from pygame import event
 from pygame import image
 from pygame import init
 from pygame import font
-import contra
 
 
 def check():

@@ -1,4 +1,3 @@
-from tkinter import Y
 from pygame.mixer import music
 from pygame.locals import*
 from pygame import display
