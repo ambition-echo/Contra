@@ -69,7 +69,7 @@ def showmenu():
 
 def mainmenu():
     data_init()
-    # 循环显示
+
     while True:
         check()
         if(flag):

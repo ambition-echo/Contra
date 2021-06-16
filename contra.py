@@ -4,6 +4,8 @@ from pygame import display
 from pygame import event
 from pygame import image
 from pygame import init
+import bullet
+import enemy
 
 
 def data_init():
@@ -16,7 +18,7 @@ def data_init():
         (900, 600), flags=DOUBLEBUF)
     # 加载图片
     title = image.load('img/map/map.png').convert()
-    P1 = image.load('img/P1/R/player.png').convert_alpha()
+    P1 = image.load(enemy.player.url).convert_alpha()
     music.load('audio/background.ogg')
     music.play(loops=-1, start=0.0)
 
