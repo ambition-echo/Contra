@@ -18,13 +18,14 @@ class player(object):
         self.y = y
         self.width = width
         self.height = height
-        self.player0 = image.load('img/P1/R/player.png')
-        self.player1 = image.load('img/P1/R/player1.png')
-        self.player2 = image.load('img/P1/R/player2.png')
-        self.player3 = image.load('img/P1/R/player3.png')
-        self.player4 = image.load('img/P1/R/player4.png')
-        self.player5 = image.load('img/P1/R/player5.png')
-        self.url = [self.player0, self.player1, self.player2,
-                    self.player3, self.player4, self.player5]
+        self.player0 = image.load('img/P1/R/player0.png')
+        self.down_r = image.load('img/P1/R/down.png')
+        self.down_l = image.load('img/P1/L/down.png')
+        self.up_r = image.load('img/P1/R/up.png')
+        self.up_l = image.load('img/P1/L/up.png')
+        self.url_r = [image.load('img/P1/R/player0.png'), image.load('img/P1/R/player1.png'), image.load('img/P1/R/player2.png'),
+                      image.load('img/P1/R/player3.png'), image.load('img/P1/R/player4.png'), image.load('img/P1/R/player5.png')]
+        self.url_l = [image.load('img/P1/L/player0.png'), image.load('img/P1/L/player1.png'), image.load('img/P1/L/player2.png'),
+                      image.load('img/P1/L/player3.png'), image.load('img/P1/L/player4.png'), image.load('img/P1/L/player5.png')]
 
         self.shooting = image.load('img/P1/R/shooting3.png')
