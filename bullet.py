@@ -1,4 +1,5 @@
 import enemy
+from pygame import image
 
 
 def check(x, y, target):
@@ -18,6 +19,7 @@ class bullet(object):
         self.x = x
         self.y = y
         self.speed = speed
+        self.url = image.load('img/bullet/bullet1.png')
 
     def boom(self, target):
         if check(self.x, self.y, target):

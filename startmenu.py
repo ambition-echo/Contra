@@ -27,6 +27,8 @@ def check():
                     flag = 1
                 if option_y == 440:
                     print('2')
+                    screen.fill((0, 0, 0))
+                    flag = 1
 
 
 def data_init():
