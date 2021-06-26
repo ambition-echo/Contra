@@ -51,7 +51,7 @@ def check():
                     else:
                         P1 = p1.up_l
                         p1.y -= 30
-                    #direction = 'u'
+                    direction = 'u'
             elif i.key == K_s:
                 if direction == 'r':
                     P1 = p1.down_r
@@ -77,11 +77,19 @@ def check():
                     else:
                         bullets.append(bullet.bullet(
                             direction, 420, p1.y+15, 0.7))
+                elif P1 == p1.up_l or P1 == p1.up_r:
+                    if P1 == p1.up_r:
+                        bullets.append(bullet.bullet(
+                            direction, 480, p1.y, 0.7))
+                    if P1 == p1.up_l:
+                        bullets.append(bullet.bullet(
+                            direction, 460, p1.y, 0.7))
                 else:
                     P1 = p1.shooting
                     if direction == 'r':
                         bullets.append(bullet.bullet(
                             direction, 550, p1.y+25, 0.7))
+                        
                     else:
                         bullets.append(bullet.bullet(
                             direction, 420, p1.y+25, 0.7))
@@ -89,11 +97,13 @@ def check():
         # 按键弹起后归零
         if i.type == KEYUP:
             if i.key == K_w:
-                if direction == 'r':
+                if P1 == p1.up_r:
                     P1 = p1.url_r[p_cc]
+                    direction = 'r'
                     p1.y += 30
-                if direction == 'l':
+                if P1 == p1.up_l:
                     P1 = p1.url_l[p_cc]
+                    direction = 'l'
                     p1.y += 30
             elif i.key == K_s:
                 if direction == 'r':
@@ -113,14 +123,14 @@ def check():
                 c = 0
                 p_c = 0
             elif i.key == K_j:
-                if P1 == p1.down_l or P1 == p1.down_r:
+                if P1 == p1.down_l or P1 == p1.down_r or P1 == p1.up_l or P1 == p1.up_r:
                     pass
                 else:
                     P1 = p1.player0
     p1.x += move_x_l-move_x_r
     p1.y += move_y_d-move_y_u
     p_c += c
-    p_c %= 480
+    p_c %= 400
     if 0 <= p_c < 80:
         p_cc = 0
     if 80 <= p_c < 160:
@@ -131,8 +141,6 @@ def check():
         p_cc = 3
     if 320 <= p_c < 400:
         p_cc = 4
-    if 400 <= p_c < 480:
-        p_cc = 5
     if direction == 'r' and P1 != p1.down_r and P1 != p1.down_l and P1 != p1.up_r and P1 != p1.up_l:
         P1 = p1.url_r[p_cc]
     if direction == 'l' and P1 != p1.down_r and P1 != p1.down_l and P1 != p1.up_r and P1 != p1.up_l:
@@ -159,6 +167,7 @@ def maingame():
     while True:
         check()
         show()
+        #print(len(bullets))
 
 
 def main():

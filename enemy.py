@@ -23,9 +23,9 @@ class player(object):
         self.down_l = image.load('img/P1/L/down.png')
         self.up_r = image.load('img/P1/R/up.png')
         self.up_l = image.load('img/P1/L/up.png')
-        self.url_r = [image.load('img/P1/R/player0.png'), image.load('img/P1/R/player1.png'), image.load('img/P1/R/player2.png'),
+        self.url_r = [image.load('img/P1/R/player1.png'), image.load('img/P1/R/player2.png'),
                       image.load('img/P1/R/player3.png'), image.load('img/P1/R/player4.png'), image.load('img/P1/R/player5.png')]
-        self.url_l = [image.load('img/P1/L/player0.png'), image.load('img/P1/L/player1.png'), image.load('img/P1/L/player2.png'),
+        self.url_l = [image.load('img/P1/L/player1.png'), image.load('img/P1/L/player2.png'),
                       image.load('img/P1/L/player3.png'), image.load('img/P1/L/player4.png'), image.load('img/P1/L/player5.png')]
 
         self.shooting = image.load('img/P1/R/shooting3.png')
